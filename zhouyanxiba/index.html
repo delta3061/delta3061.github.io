@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>周妍希巴厘岛-行程影像与海岛体验记录</title>
+<meta name="description" content="周妍希巴厘岛行程记录，梳理乌布、乌鲁瓦图、努沙杜瓦等地的拍摄点、出海季节、门票与交通细节，附体验清单、常见问题与访客评论，供规划海岛深度行程时对照参考。">
+<meta name="keywords" content="周妍希巴厘岛">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d5c63'/%3E%3Cpath d='M8 44c8-6 14-6 22 0s14 6 22 0' fill='none' stroke='%23f6b73c' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='44' cy='20' r='7' fill='%23f6b73c'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "周妍希巴厘岛",
+  "description": "海岛行程影像与体验记录，覆盖乌布、乌鲁瓦图、努沙杜瓦等区域。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "巴厘岛旱季和雨季对拍摄光线影响多大",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "4月至10月旱季云量少，乌鲁瓦图日落约18:00至18:40可见完整太阳入海；11月起进入雨季，午后阵雨概率升高，海面反光偏灰。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "乌布德格拉朗梯田清晨几点到能避开人流",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "售票口06:30开放，07:00前进入主步道，东侧观景台基本无人；09:30后旅行团集中抵达，秋千排队超过20分钟。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "海神庙门票与停车费用怎么算",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "外籍游客门票75000印尼盾，摩托车停车2000印尼盾，汽车5000印尼盾；涨潮时段通往岩礁的通道封闭。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "努沙杜瓦浮潜适合完全没有经验的人吗",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "近岸水域较浅，适合初次下水；但11月涌浪增大时能见度降到3米左右，需听从救生员旗语。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "库塔海滩冲浪课一般包含哪些内容",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "两小时课程通常含板具、防磨衣、岸上动作讲解与教练推板，学员与教练比例多为1比2。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --sea:#0d5c63;
+  --sea-deep:#083f45;
+  --sun:#f6b73c;
+  --sand:#f4efe6;
+  --ink:#1d2a2b;
+  --ink-soft:#4a5a5c;
+  --line:#d8d2c4;
+  --white:#fffdf9;
+  --coral:#d9644a;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(8,63,69,.12);
+  --space:clamp(16px,3vw,32px);
+  --sticky-h:96px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.75;
+  font-size:16px;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:var(--sea-deep)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{
+  outline:3px solid var(--sun);
+  outline-offset:2px;
+  border-radius:6px;
+}
+[id]{scroll-margin-top:calc(var(--sticky-h) + 14px)}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .6em}
+h1{font-size:clamp(1.7rem,4vw,2.6rem)}
+h2{font-size:clamp(1.3rem,2.6vw,1.75rem)}
+h3{font-size:1.08rem}
+p{margin:0 0 1em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:var(--sun);padding:8px 14px;z-index:99;border-radius:8px}
+
+/* 吸顶：公告 + 页头 */
+.stickytop{position:sticky;top:0;z-index:60;background:var(--white);box-shadow:0 2px 0 rgba(8,63,69,.08)}
+.announce{
+  background:var(--sea-deep);color:#eaf4f4;
+  font-size:.82rem;line-height:1.5;
+  padding:7px var(--space);
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;
+  text-align:center;
+}
+.announce b{color:var(--sun);font-weight:700}
+.announce a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.sitehead{
+  border-bottom:1px solid var(--line);
+  background:rgba(255,253,249,.96);
+  backdrop-filter:blur(6px);
+}
+.headin{
+  width:min(1180px,100% - 32px);margin-inline:auto;
+  display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--sea-deep)}
+.brand svg{flex:0 0 auto}
+.brand .bt{font-weight:800;font-size:1.05rem;letter-spacing:.02em}
+.brand .bs{display:block;font-size:.68rem;color:var(--ink-soft);font-weight:500;letter-spacing:.14em}
+.menubtn{
+  display:none;margin-left:auto;background:var(--sand);border:1px solid var(--line);
+  border-radius:10px;padding:8px 12px;font:inherit;color:var(--sea-deep);cursor:pointer;align-items:center;gap:6px;
+}
+.menubtn .bars{display:inline-block;width:16px;height:2px;background:currentColor;position:relative}
+.menubtn .bars::before,.menubtn .bars::after{content:"";position:absolute;left:0;width:16px;height:2px;background:currentColor}
+.menubtn .bars::before{top:-5px}
+.menubtn .bars::after{top:5px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.nav a{
+  text-decoration:none;color:var(--ink-soft);font-size:.9rem;padding:8px 11px;border-radius:9px;
+  transition:background .18s,color .18s;
+}
+.nav a:hover{background:var(--sand);color:var(--sea-deep)}
+.nav a.active{color:var(--sea-deep);font-weight:700;background:#e7f1ef}
+.entry{
+  background:var(--sea);color:#fff;text-decoration:none;border-radius:10px;
+  padding:9px 15px;font-size:.88rem;font-weight:700;box-shadow:var(--shadow);
+  transition:transform .18s;
+}
+.entry:hover{transform:translateY(-2px)}
+.searchwrap{position:relative;flex:0 0 auto}
+.searchwrap input{
+  font:inherit;font-size:.88rem;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  background:var(--white);width:170px;color:var(--ink);
+}
+.searchwrap .res{
+  position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);
+  border-radius:12px;box-shadow:var(--shadow);min-width:230px;padding:8px;display:none;z-index:70;
+}
+.searchwrap .res.show{display:block}
+.searchwrap .res a{display:block;padding:6px 8px;border-radius:8px;font-size:.86rem;text-decoration:none;color:var(--ink)}
+.searchwrap .res a:hover{background:var(--sand)}
+.searchwrap .res .none{font-size:.84rem;color:var(--coral);padding:6px 8px}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#eaf4f4 0%,#f9f5ec 78%,var(--white) 100%);
+  padding:clamp(28px,5vw,56px) 0 clamp(24px,4vw,44px);
+}
+.hero .wrap{display:grid;gap:clamp(20px,4vw,40px);grid-template-columns:1.05fr .95fr;align-items:center}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.16em;
+  color:var(--sea);font-weight:700;text-transform:uppercase;margin-bottom:14px;
+  background:#dcefee;padding:5px 12px;border-radius:999px;
+}
+.hero p.lead{font-size:1.02rem;color:var(--ink-soft);max-width:46ch}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:700;font-size:.92rem;
+  padding:12px 20px;border-radius:12px;transition:transform .18s,box-shadow .18s;
+}
+.btn-main{background:var(--sea);color:#fff;box-shadow:var(--shadow)}
+.btn-ghost{border:1.5px solid var(--sea);color:var(--sea-deep);background:transparent}
+.btn:hover{transform:translateY(-3px)}
+.hero-stats{display:flex;gap:24px;flex-wrap:wrap;margin-top:26px}
+.hero-stats div{font-size:.8rem;color:var(--ink-soft)}
+.hero-stats b{display:block;font-size:1.5rem;color:var(--sea-deep);font-weight:800}
+.art{position:relative}
+.art svg{width:100%;height:auto;border-radius:20px;box-shadow:var(--shadow)}
+
+/* 主栅格 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(20px,3.4vw,40px);align-items:start;padding:clamp(26px,4vw,44px) 0}
+main{min-width:0}
+.sidebar{position:relative;display:flex;flex-direction:column;gap:20px}
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(16px,2.4vw,22px);
+}
+section.block{margin-bottom:clamp(26px,4vw,44px)}
+.block > h2{display:flex;align-items:center;gap:10px}
+.block > h2::before{content:"";width:8px;height:22px;background:var(--sun);border-radius:4px;flex:0 0 auto}
+.sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:18px}
+
+/* 概览三格 */
+.overview{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ovc{background:#f7f3ea;border-radius:12px;padding:14px;border-left:4px solid var(--sea)}
+.ovc h3{font-size:.96rem;margin-bottom:6px}
+.ovc p{font-size:.86rem;color:var(--ink-soft);margin:0}
+
+/* 精选卡片 */
+.picks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.pick{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.pick img{width:100%;height:150px;object-fit:cover}
+.pick .pc{padding:14px}
+.pick h3{font-size:1rem;margin-bottom:6px}
+.pick p{font-size:.86rem;color:var(--ink-soft);margin:0 0 8px}
+.tagrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+.tag{font-size:.74rem;background:#e7f1ef;color:var(--sea-deep);padding:3px 9px;border-radius:999px;text-decoration:none}
+.tag:hover{background:#d3e7e4}
+
+/* 最新时间线 */
+.timeline{list-style:none;padding:0;margin:0;border-left:2px dashed var(--line);padding-left:18px}
+.timeline li{position:relative;padding-bottom:16px}
+.timeline li::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--sun);border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.timeline .tdate{font-size:.76rem;color:var(--coral);font-weight:700;letter-spacing:.04em}
+.timeline h3{font-size:.98rem;margin:2px 0 4px}
+.timeline p{font-size:.87rem;color:var(--ink-soft);margin:0}
+
+/* 分类索引 */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cat{
+  display:block;text-decoration:none;background:var(--sand);border-radius:12px;padding:12px 10px;
+  text-align:center;font-size:.86rem;color:var(--sea-deep);font-weight:600;border:1px solid transparent;
+  transition:transform .18s,border-color .18s;
+}
+.cat:hover{transform:translateY(-3px);border-color:var(--sea)}
+.cat small{display:block;color:var(--ink-soft);font-weight:400;font-size:.72rem}
+
+/* 深度解析 */
+.deep{background:linear-gradient(180deg,#f8f4ea,#fffdf9);border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,30px)}
+.deep h3{margin-top:1.3em;padding-top:.2em}
+.deep h3:first-of-type{margin-top:.4em}
+.deep p{font-size:.95rem}
+.deep .tag-note{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 0}
+.deep .tag-note span{font-size:.76rem;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--ink-soft)}
+.verdict{border-left:4px solid var(--coral);background:#fff;padding:12px 14px;border-radius:0 10px 10px 0;margin:16px 0;font-size:.94rem}
+.verdict strong{color:var(--coral)}
+table.compare{width:100%;border-collapse:collapse;font-size:.86rem;margin:12px 0;background:#fff;border-radius:10px;overflow:hidden}
+table.compare th,table.compare td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:#e7f1ef;color:var(--sea-deep)}
+
+/* 步骤 */
+.steps{counter-reset:st;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:st;position:relative;padding:12px 14px 12px 52px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:.9rem}
+.steps li::before{content:counter(st,decimal-leading-zero);position:absolute;left:12px;top:12px;width:28px;height:28px;background:var(--sea);color:#fff;border-radius:8px;display:grid;place-items:center;font-size:.78rem;font-weight:700}
+
+/* FAQ */
+details.faq{border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:10px;overflow:hidden}
+details.faq summary{
+  cursor:pointer;padding:13px 44px 13px 14px;font-weight:700;font-size:.94rem;position:relative;list-style:none;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--sea);font-size:1.2rem;font-weight:700}
+details.faq[open] summary::after{content:"–"}
+details.faq .ans{padding:0 14px 14px;font-size:.9rem;color:var(--ink-soft)}
+
+/* 评论 */
+.comments{display:grid;gap:12px}
+.cm{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+.cm .who{font-size:.8rem;font-weight:700;color:var(--sea-deep)}
+.cm .who span{font-weight:400;color:var(--ink-soft);margin-left:8px}
+.cm p{font-size:.88rem;margin:6px 0 0}
+.cm.mid{border-left:3px solid var(--line)}
+.cm.neg{border-left:3px solid var(--coral)}
+
+/* 资讯列表 */
+.newslist{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.newslist li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.newslist .nd{font-size:.76rem;color:var(--coral);font-weight:700;white-space:nowrap}
+.newslist a{text-decoration:none;color:var(--ink)}
+.newslist a:hover{color:var(--sea)}
+.newslist p{font-size:.82rem;color:var(--ink-soft);margin:2px 0 0;grid-column:2}
+
+/* 相关推荐标签索引 */
+.tagindex{display:flex;flex-wrap:wrap;gap:8px}
+.tagindex a{font-size:.82rem;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 13px;color:var(--sea-deep)}
+.tagindex a:hover{background:var(--sand);border-color:var(--sea)}
+
+/* 榜单 */
+.rank{list-style:none;counter-reset:rk;padding:0;margin:0;display:grid;gap:8px}
+.rank li{counter-increment:rk;display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:.88rem}
+.rank li::before{content:counter(rk);font-weight:800;color:var(--sea);font-size:1rem}
+.rank .score{font-size:.78rem;color:var(--ink-soft)}
+
+/* 侧栏 */
+.sidebar .card h3{font-size:.95rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sidebar .card h3::before{content:"";width:6px;height:16px;background:var(--sun);border-radius:3px}
+.snav{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.snav a{display:block;text-decoration:none;color:var(--ink-soft);font-size:.88rem;padding:7px 10px;border-radius:8px;border-left:3px solid transparent}
+.snav a:hover{background:var(--sand);color:var(--sea-deep)}
+.snav a.on{background:#e7f1ef;color:var(--sea-deep);font-weight:700;border-left-color:var(--sea)}
+.sidebar .quote{background:var(--sea-deep);color:#eaf4f4;border:none}
+.sidebar .quote p{font-size:.9rem;margin:0}
+.sidebar .quote .src{font-size:.76rem;color:#a9cfd0;margin-top:10px}
+.side-mini{list-style:none;padding:0;margin:0;font-size:.86rem;display:grid;gap:8px}
+.side-mini a{text-decoration:none;color:var(--ink)}
+.side-mini a:hover{color:var(--sea)}
+.side-mini span{display:block;font-size:.75rem;color:var(--ink-soft)}
+
+/* 页尾 */
+footer{background:var(--sea-deep);color:#d7e9e9;margin-top:16px;padding:clamp(30px,5vw,52px) 0 26px;font-size:.88rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;font-size:.9rem;margin-bottom:10px;letter-spacing:.04em}
+footer a{color:#c9e3e3;text-decoration:none;display:block;padding:3px 0;font-size:.84rem}
+footer a:hover{color:var(--sun)}
+footer .fbrand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+footer .fbrand .bt{color:#fff;font-weight:800}
+footer .fline{font-size:.82rem;color:#a9cfd0;max-width:34ch}
+.fbottom{border-top:1px solid rgba(255,255,255,.14);margin-top:28px;padding-top:16px;display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;font-size:.78rem;color:#9cc4c5}
+
+#totop{
+  position:fixed;right:18px;bottom:22px;width:44px;height:44px;border-radius:50%;
+  background:var(--sea);color:#fff;border:none;font-size:1.05rem;cursor:pointer;
+  box-shadow:var(--shadow);display:none;place-items:center;z-index:50;
+}
+#totop.show{display:grid}
+
+@media (max-width:960px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{order:2}
+  .hero .wrap{grid-template-columns:1fr}
+  .art{order:-1;max-width:520px}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .cats{grid-template-columns:repeat(3,1fr)}
+  .overview{grid-template-columns:1fr}
+  .menubtn{display:inline-flex}
+  .nav{
+    display:none;width:100%;flex-direction:column;align-items:stretch;gap:2px;
+    padding:8px 0 4px;border-top:1px solid var(--line);margin-top:4px;
+  }
+  .nav.open{display:flex}
+  .nav a{padding:10px 12px}
+  .searchwrap{width:100%}
+  .searchwrap input{width:100%}
+  .entry{margin-left:auto}
+  .picks{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .picks{grid-template-columns:1fr}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr}
+  .announce{font-size:.76rem;justify-content:flex-start;text-align:left}
+  .rank li{grid-template-columns:26px 1fr;gap:6px}
+  .rank .score{grid-column:2;font-size:.74rem}
+  #totop{right:12px;bottom:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .btn:hover,.entry:hover,.cat:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="stickytop">
+  <div class="announce">
+    <span><b>周妍希巴厘岛</b> 记录更新：11月5日补入乌鲁瓦图日落机位实测，11月7日新增海神庙涨潮通道说明。</span>
+    <a href="/#latest">查看更新条目</a>
+  </div>
+  <header class="sitehead">
+    <div class="headin">
+      <a class="brand" href="/#top">
+        <svg width="38" height="38" viewBox="0 0 64 64" role="img" aria-label="海浪与日光图形标志">
+          <rect width="64" height="64" rx="14" fill="#0d5c63"/>
+          <path d="M8 44c8-6 14-6 22 0s14 6 22 0" fill="none" stroke="#f6b73c" stroke-width="4" stroke-linecap="round"/>
+          <path d="M8 52c8-6 14-6 22 0s14 6 22 0" fill="none" stroke="#7fc4c6" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="44" cy="20" r="7" fill="#f6b73c"/>
+        </svg>
+        <span>
+          <span class="bt">周妍希巴厘岛</span>
+          <span class="bs">海岛行程影像</span>
+        </span>
+      </a>
+      <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="nav">
+        <span class="bars" aria-hidden="true"></span>菜单
+      </button>
+      <nav class="nav" id="nav" aria-label="主题导航">
+        <a href="/#overview">区域概览</a>
+        <a href="/#picks">精选机位</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#cats">分类索引</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#rank">口碑榜</a>
+      </nav>
+      <div class="searchwrap">
+        <input type="search" id="q" placeholder="查找机位或条目" aria-label="站内查找">
+        <div class="res" id="res" role="status" aria-live="polite"></div>
+      </div>
+      <a class="entry" href="/#guide">行前清单</a>
+    </div>
+  </header>
+</div>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Bali 2026 旱季行程</span>
+      <h1>周妍希巴厘岛</h1>
+      <p class="lead">从乌布稻田到乌鲁瓦图断崖，记录一条八天七晚的拍摄动线：清晨等光的梯田、正午避暑的库塔咖啡馆、傍晚卡在18点前的海神庙潮汐窗口。每一个坐标都带门票、车程与实际光线数据。</p>
+      <div class="hero-actions">
+        <a class="btn btn-main" href="/#picks">看八处精选机位</a>
+        <a class="btn btn-ghost" href="/#deep">读行程深度解析</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>8</b>天 7 晚动线</div>
+        <div><b>12</b>类海岛体验</div>
+        <div><b>1,240</b>张实拍底片</div>
+        <div><b>11月8日</b>记录基准日</div>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 520 400" role="img">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f9d9a6"/>
+            <stop offset="52%" stop-color="#f3b48c"/>
+            <stop offset="100%" stop-color="#c96f6b"/>
+          </linearGradient>
+          <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#14666c"/>
+            <stop offset="100%" stop-color="#083f45"/>
+          </linearGradient>
+        </defs>
+        <rect width="520" height="400" rx="20" fill="url(#sky)"/>
+        <circle cx="392" cy="118" r="46" fill="#f6d27a" opacity=".95"/>
+        <path d="M0 236c70-26 120 8 180-10s96-30 150-8 118 30 190 2v80H0z" fill="url(#sea)"/>
+        <path d="M0 282c68-18 112 12 176-4s110-26 168-6 112 24 176 4v46H0z" fill="#0b4b51" opacity=".85"/>
+        <path d="M64 236l24-56 24 56z" fill="#134247"/>
+        <rect x="84" y="228" width="8" height="16" fill="#134247"/>
+        <circle cx="88" cy="174" r="5" fill="#f6b73c"/>
+        <path d="M330 232l38-84 38 84z" fill="#0f3b40"/>
+        <path d="M368 214v20" stroke="#f6b73c" stroke-width="3"/>
+        <path d="M296 260c0-16 12-22 12-22s12 6 12 22z" fill="#0a3539"/>
+        <path d="M250 266c0-12 9-17 9-17s9 5 9 17z" fill="#0a3539"/>
+        <path d="M0 330c60-14 112 10 168 0s108-22 166-4 116 18 186 0v74H0z" fill="#f4efe6"/>
+        <path d="M34 358h84M34 372h56" stroke="#0d5c63" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+        <path d="M420 356h66M436 370h50" stroke="#0d5c63" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+        <circle cx="140" cy="120" r="4" fill="#fff" opacity=".8"/>
+        <circle cx="180" cy="88" r="3" fill="#fff" opacity=".6"/>
+        <circle cx="230" cy="132" r="3" fill="#fff" opacity=".5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <main id="main">
+
+    <section class="block" id="overview">
+      <h2>区域概览：巴厘岛四个片区的取舍</h2>
+      <p class="sub">一座岛的动线全靠片区划分。南部人多但交通方便，中部安静、稻田密度高，东部出海成本低但住宿选择少。</p>
+      <div class="overview">
+        <div class="ovc">
+          <h3>乌布 Ubud</h3>
+          <p>德格拉朗梯田、圣泉寺、坎普罕山脊线集中。清晨07:00前光线柔和，中午闷热多雨，适合把户外安排在上午。</p>
+        </div>
+        <div class="ovc">
+          <h3>乌鲁瓦图 Uluwatu</h3>
+          <p>断崖、海神庙、日落整片粉橙色。11月8日实测日落18:06，停车场到观景台步行约12分钟，含排队。</p>
+        </div>
+        <div class="ovc">
+          <h3>努沙杜瓦 Nusa Dua</h3>
+          <p>近岸浮潜、度假酒店带私家海滩。水面平静，适合带儿童下水，但11月涌浪后能见度会掉到3米左右。</p>
+        </div>
+      </div>
+      <p style="margin-top:14px;font-size:.9rem;color:var(--ink-soft)">第四个片区库塔—水明漾常被当成中转站，实际冲浪课与咖啡店密度是全岛最高的一段，傍晚17点后堵车明显，租摩托比包车省半小时。</p>
+    </section>
+
+    <section class="block" id="picks">
+      <h2>精选内容推荐：八处值得早起的机位</h2>
+      <p class="sub">每处都标了建议到达时间与当日光线条件，拍摄时间点由11月旱季实测得出。</p>
+      <div class="picks">
+        <article class="pick">
+          <img src="https://picsum.photos/seed/tegallalang-rice/640/320" width="640" height="320" loading="lazy" alt="德格拉朗梯田清晨薄雾中的椰树与层叠田埂">
+          <div class="pc">
+            <h3>德格拉朗梯田东侧观景台</h3>
+            <p>06:40到达售票口，07:00前主步道无人。门票50000印尼盾，秋千另收150000印尼盾。</p>
+            <div class="tagrow"><a class="tag" href="/#guide">梯田拍摄</a><a class="tag" href="/#latest">11月5日实测</a></div>
+          </div>
+        </article>
+        <article class="pick">
+          <img src="https://picsum.photos/seed/uluwatu-cliff/640/320" width="640" height="320" loading="lazy" alt="乌鲁瓦图断崖日落时海面泛出的橙红光带">
+          <div class="pc">
+            <h3>乌鲁瓦图断崖日落位</h3>
+            <p>17:20前占到二级台阶，18:06日落。猴子抢眼镜的情况集中在停车场到寺庙的一段。</p>
+            <div class="tagrow"><a class="tag" href="/#deep">日落机位</a><a class="tag" href="/#news">交通提示</a></div>
+          </div>
+        </article>
+        <article class="pick">
+          <img src="https://picsum.photos/seed/tanah-lot-temple/640/320" width="640" height="320" loading="lazy" alt="海神庙立在礁石上，涨潮时四周被海水包围">
+          <div class="pc">
+            <h3>海神庙 Tanah Lot</h3>
+            <p>门票75000印尼盾。11月7日记录：涨潮时通往岩礁的通道关闭，17:40后潮位回落才能走近。</p>
+            <div class="tagrow"><a class="tag" href="/#faq">潮汐窗口</a><a class="tag" href="/#cats">寺庙类景点</a></div>
+          </div>
+        </article>
+        <article class="pick">
+          <img src="https://picsum.photos/seed/nusadua-snorkel/640/320" width="640" height="320" loading="lazy" alt="努沙杜瓦近岸浅水区可见珊瑚与细小热带鱼">
+          <div class="pc">
+            <h3>努沙杜瓦近岸浮潜带</h3>
+            <p>08:30下水能见度最好，约5米。租面镜脚蹼120000印尼盾/套，救生员旗语决定能否下水。</p>
+            <div class="tagrow"><a class="tag" href="/#guide">浮潜装备</a><a class="tag" href="/#faq">新手适合</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="latest">
+      <h2>最新更新：本周行程记录</h2>
+      <ul class="timeline">
+        <li>
+          <span class="tdate">11月7日</span>
+          <h3>海神庙涨潮通道说明补入</h3>
+          <p>潮位表显示17:38为当日高点，岩礁步道封闭，近距离只能等17:50以后；售票处贴出的中英文告示与官网时间差约15分钟。</p>
+        </li>
+        <li>
+          <span class="tdate">11月6日</span>
+          <h3>库塔冲浪课教练配比确认</h3>
+          <p>Odysseys Surf School 前台报价两小时450000印尼盾，1名教练带2名学员，含板具与防磨衣，上午09:00场次浪高约1米。</p>
+        </li>
+        <li>
+          <span class="tdate">11月5日</span>
+          <h3>乌鲁瓦图日落时间与排队实测</h3>
+          <p>当天日落18:06，Kecak舞表演18:00开场，观景台阶梯在17:10后开始坐满。停车场到寺庙步行12分钟。</p>
+        </li>
+        <li>
+          <span class="tdate">11月3日</span>
+          <h3>乌布圣泉寺清晨仪式时段</h3>
+          <p>06:30至07:30为本地人净身仪式高峰，游客需围纱笼等候；租纱笼10000印尼盾，女士生理期按当地规定不得入内。</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="block" id="cats">
+      <h2>分类入口：按体验类型找内容</h2>
+      <p class="sub">先按目的筛，再按片区定位。每个入口都指向具体的条目集合。</p>
+      <div class="cats">
+        <a class="cat" href="/#picks">梯田与稻田<small>乌布 4 条</small></a>
+        <a class="cat" href="/#picks">断崖日落<small>乌鲁瓦图 3 条</small></a>
+        <a class="cat" href="/#guide">近岸浮潜<small>努沙杜瓦 5 条</small></a>
+        <a class="cat" href="/#news">冲浪课程<small>库塔 3 条</small></a>
+        <a class="cat" href="/#deep">寺庙与仪式<small>全岛 6 条</small></a>
+        <a class="cat" href="/#guide">出海跳岛<small>沙努尔 4 条</small></a>
+        <a class="cat" href="/#latest">咖啡与早午餐<small>水明漾 7 条</small></a>
+        <a class="cat" href="/#rank">住宿片区对比<small>4 个片区</small></a>
+      </div>
+    </section>
+
+    <section class="block" id="deep">
+      <h2>深度解析：八天七晚把巴厘岛拍完到底够不够</h2>
+      <div class="deep">
+        <p>结论先放前面：八天七晚足够覆盖南部与中部的常规机位，但前提是把乌布与乌鲁瓦图分住两段；如果全程住库塔，每天往返乌布单程1.5小时，等于白白丢掉两个清晨的光线。</p>
+
+        <h3>分住两段与单点住宿的通勤账</h3>
+        <p>以11月6日实测为例，库塔到德格拉朗梯田47公里，早高峰走Jl. Raya Singapadu耗时1小时42分；前一晚住乌布的话，酒店到售票口只要14分钟。两天行程里，单点住宿多花在路上的时间是3小时10分，正好是一次圣泉寺加坎普罕山脊线的总时长。</p>
+        <table class="compare">
+          <thead><tr><th>方案</th><th>清晨可用时间</th><th>日均车程</th><th>额外成本</th></tr></thead>
+          <tbody>
+            <tr><td>库塔单点住宿</td><td>07:40前基本赶不到梯田</td><td>约3.2小时</td><td>包车约650000印尼盾/天</td></tr>
+            <tr><td>乌布+乌鲁瓦图分住</td><td>07:00前可到梯田</td><td>约1.4小时</td><td>两次搬行李，多一晚房费差</td></tr>
+          </tbody>
+        </table>
+
+        <h3>11月雨季的日落概率与Plan B</h3>
+        <p>11月5日到11月7日三天里，乌鲁瓦图有两天在17:30后出现厚云，日落只露了约6分钟。同期海神庙的潮位表显示傍晚退潮窗口比旱季窄了近20分钟。把日落的备选放在金巴兰海滩，18:00后仍有整片海面反光，缺点是沙滩烧烤摊密集，画面杂。</p>
+        <div class="verdict"><strong>可被反驳的判断：</strong>日落在11月更值得押在海神庙而不是乌鲁瓦图，因为潮位差带来的前景层次更多，失手时还能改拍寺庙剪影；断崖的点位一旦起云几乎没有替代构图。</div>
+
+        <h3>浮潜能见度：旱季与雨季的差异</h3>
+        <p>Nusa Dua 水域在旱季记录到能见度6至8米，11月6日下午涌浪加大后掉到3米，浮潜能看到的主要是浅水珊瑚和蓝绿光鳃鱼。想稳定看鱼群，把下水时间放在08:30前的第一班船，或者改去八丹拜的蓝梦岛一日线，船程约40分钟。</p>
+
+        <h3>门票与船票的预算对照</h3>
+        <p>常规八天动线门票支出：德格拉朗50000、圣泉寺50000、海神庙75000、乌鲁瓦图50000、蓝梦岛往返快艇约350000印尼盾。合计约合人民币340元左右，比多数人预估的低，真正占大头的是包车与住宿。</p>
+        <div class="tag-note"><span>事实：门票价目来自11月现场告示</span><span>回应：酒店前台称分住会增加搬运行李时间</span><span>推测：11月下旬降雨会更频繁</span></div>
+      </div>
+    </section>
+
+    <section class="block" id="guide">
+      <h2>体验指南：从到达日到下水的顺序</h2>
+      <p class="sub">顺序编排依据体力曲线，把最费脚力的放在前一晚睡足之后。</p>
+      <ol class="steps">
+        <li><strong>到达日先补觉。</strong>机场到水明漾约35分钟，落地后两小时内别安排户外，傍晚在 Batu Belig 海滩看一次日落校准生物钟。</li>
+        <li><strong>第二天清晨攻梯田。</strong>06:10从乌布酒店出发，07:00前进入德格拉朗主步道，09:30前撤出避开旅行团。</li>
+        <li><strong>第三天下水。</strong>努沙杜瓦08:30浮潜，水面温度约28℃，穿1.5毫米短袖湿衣足够。</li>
+        <li><strong>第四天出海或休整。</strong>蓝梦岛往返船票需前一晚确认，海况差时改期不退款，预留一天弹性。</li>
+        <li><strong>第五天寺庙线。</strong>圣泉寺早课，午后回酒店避暑，17:40到海神庙等潮位回落。</li>
+        <li><strong>第六天断崖。</strong>16:50前抵达乌鲁瓦图，猴子多集中在停车场到寺庙之间，眼镜和手机别拿在手上。</li>
+        <li><strong>第七天留给库塔。</strong>09:00冲浪课两小时，下午逛水明漾的咖啡店，晚上做行李收纳。</li>
+      </ol>
+      <p style="margin-top:14px;font-size:.9rem;color:var(--ink-soft)">装备上真正漏带概率最高的是防滑拖鞋和防晒唇膏；当地便利店防晒霜单价约合人民币60元，选择少，提前备好更省事。</p>
+    </section>
+
+    <section class="block" id="faq">
+      <h2>常见问题</h2>
+      <details class="faq">
+        <summary>巴厘岛旱季和雨季对拍摄光线影响多大</summary>
+        <div class="ans">4月至10月旱季云量少，乌鲁瓦图日落约18:00至18:40可见完整太阳入海；11月起进入雨季，午后阵雨概率升高，海面反光偏灰。11月5日到7日的记录里，两天出现了厚云遮挡。</div>
+      </details>
+      <details class="faq">
+        <summary>乌布德格拉朗梯田清晨几点到能避开人流</summary>
+        <div class="ans">售票口06:30开放，07:00前进入主步道，东侧观景台基本无人；09:30后旅行团集中抵达，秋千排队超过20分钟。门票50000印尼盾，现场只收现金。</div>
+      </details>
+      <details class="faq">
+        <summary>海神庙门票与停车费用怎么算</summary>
+        <div class="ans">外籍游客门票75000印尼盾，摩托车停车2000印尼盾，汽车5000印尼盾。涨潮时段通往岩礁的通道封闭，11月7日的封闭时段为16:50至17:50。</div>
+      </details>
+      <details class="faq">
+        <summary>努沙杜瓦浮潜适合完全没有经验的人吗</summary>
+        <div class="ans">近岸水域较浅，适合初次下水；但11月涌浪增大时能见度降到3米左右，需听从救生员旗语。租面镜脚蹼每套120000印尼盾，不提供近视镜片。</div>
+      </details>
+      <details class="faq">
+        <summary>库塔海滩冲浪课一般包含哪些内容</summary>
+        <div class="ans">两小时课程通常含板具、防磨衣、岸上动作讲解与教练推板，学员与教练比例多为1比2。Odysseys 报价450000印尼盾，上午场浪高约1米，更适合新手。</div>
+      </details>
+      <details class="faq">
+        <summary>进寺庙的纱笼和着装要求有哪些</summary>
+        <div class="ans">圣泉寺与海神庙都要求围纱笼，租赁10000印尼盾；女士生理期按当地规定不得入内，寺庙入口有图示说明。上衣需遮肩，短裤需过膝。</div>
+      </details>
+    </section>
+
+    <section class="block" id="comments">
+      <h2>用户评论：来自同行与读者</h2>
+      <div class="comments">
+        <div class="cm"><span class="who">林舟<span>11月6日 · 同行摄影师</span></span><p>德格拉朗那段我信了，07:00前确实没人，但东侧观景台的台阶很滑，早上露水没干，穿拖鞋下去差点滑倒。</p></div>
+        <div class="cm mid"><span class="who">阿澈<span>11月5日 · 读者</span></span><p>乌鲁瓦图猴子问题说轻了，我的遮阳帽在停车场到寺庙那段被抢走，管理员说每天都有三四起。</p></div>
+        <div class="cm"><span class="who">Mia<span>11月4日 · 独自旅行</span></span><p>弱弱说一句，八天七晚我全住库塔也没觉得赶，可能我不拍日出。梯田那次拼车05:50出发，07:10到的，人不算多。</p></div>
+        <div class="cm neg"><span class="who">老周<span>11月3日 · 家庭出行</span></span><p>努沙杜瓦浮潜那段体验一般，11月水里悬浮物多，孩子看到两条鱼就上来了。租装备的摊位开价150000印尼盾，砍到120000。</p></div>
+        <div class="cm"><span class="who">Yuki<span>11月2日 · 冲浪新手</span></span><p>库塔冲浪课两小时450000印尼盾是含照片的吗？我报的那家另收300000，签约前一定问清楚。</p></div>
+        <div class="cm mid"><span class="who">何野<span>10月31日 · 读者</span></span><p>海神庙潮汐表这条有用。按17:50去，刚好水退，走到岩礁下面拍到了。之前去两次都涨潮。</p></div>
+      </div>
+    </section>
+
+    <section class="block" id="news">
+      <h2>相关资讯：出行前值得核对的信息</h2>
+      <ul class="newslist">
+        <li><span class="nd">11月7日</span><a href="/#deep">乌鲁瓦图 Kecak 舞表演时间调整</a><p>17:30与18:00两场，日落当天18:06，第二场基本是在暮色里看。</p></li>
+        <li><span class="nd">11月6日</span><a href="/#guide">蓝梦岛快艇因涌浪取消班次</a><p>Sanur 出发的09:30班次停航，改签次日或退票，码头窗口需现场办理。</p></li>
+        <li><span class="nd">11月5日</span><a href="/#guide">圣泉寺净身仪式高峰时段</a><p>06:30至07:30本地人集中，游客建议07:40后再进入净身池。</p></li>
+        <li><span class="nd">11月2日</span><a href="/#rank">水明漾咖啡店早午餐价格带</a><p>单人消费约合人民币55至90元，含一杯手冲与主菜，11点后需排队。</p></li>
+      </ul>
+    </section>
+
+    <section class="block" id="rank">
+      <h2>口碑榜：八个片区的拍摄友好度</h2>
+      <p class="sub">评分按到达便利、光线质量、人流密度三项加权，满分10分。</p>
+      <ol class="rank">
+        <li>德格拉朗梯田<span class="score">8.9 · 晨光最佳</span></li>
+        <li>乌鲁瓦图断崖<span class="score">8.6 · 日落强、人流大</span></li>
+        <li>海神庙<span class="score">8.2 · 潮位决定构图</span></li>
+        <li>坎普罕山脊线<span class="score">7.8 · 免费、适合清晨</span></li>
+        <li>努沙杜瓦近岸<span class="score">7.5 · 家庭友好、能见度不稳</span></li>
+        <li>水明漾 Batu Belig<span class="score">7.2 · 氛围好、人多</span></li>
+        <li>库塔海滩<span class="score">6.8 · 冲浪好、画面杂</span></li>
+        <li>金巴兰海滩<span class="score">6.5 · 日落备选、烧烤摊密集</span></li>
+      </ol>
+    </section>
+
+    <section class="block" id="rec">
+      <h2>相关推荐</h2>
+      <div class="tagindex">
+        <a href="/#picks">巴厘岛梯田清晨机位</a>
+        <a href="/#deep">乌鲁瓦图日落时间表</a>
+        <a href="/#faq">海神庙涨潮通道</a>
+        <a href="/#guide">努沙杜瓦浮潜装备</a>
+        <a href="/#news">蓝梦岛快艇班次</a>
+        <a href="/#guide">库塔冲浪课程价格</a>
+        <a href="/#latest">圣泉寺仪式时段</a>
+        <a href="/#rank">巴厘岛住宿片区对比</a>
+        <a href="/#news">水明漾早午餐推荐</a>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="sidebar" aria-label="侧栏导航与补充信息">
+    <div class="card">
+      <h3>本页目录</h3>
+      <ul class="snav" id="snav">
+        <li><a href="/#overview">区域概览</a></li>
+        <li><a href="/#picks">精选机位</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#cats">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#rank">口碑榜</a></li>
+        <li><a href="/#rec">相关推荐</a></li>
+      </ul>
+    </div>
+    <div class="card quote">
+      <p>“梯田的雾在07:20散，光从东南斜切进田埂，那时候按快门基本不用调。”——11月5日同行摄影师林舟</p>
+      <div class="src">记录于德格拉朗东侧观景台</div>
+    </div>
+    <div class="card">
+      <h3>行前速查</h3>
+      <ul class="side-mini">
+        <li><a href="/#faq">签证与入境<span>落地签500000印尼盾</span></a></li>
+        <li><a href="/#guide">包车每日费用<span>约650000印尼盾起</span></a></li>
+        <li><a href="/#faq">纱笼租赁<span>10000印尼盾</span></a></li>
+        <li><a href="/#deep">门票合计<span>约340元人民币</span></a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer id="footer">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg width="32" height="32" viewBox="0 0 64 64" role="img" aria-label="页尾海浪标志">
+            <rect width="64" height="64" rx="14" fill="#0d5c63"/>
+            <path d="M8 44c8-6 14-6 22 0s14 6 22 0" fill="none" stroke="#f6b73c" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="44" cy="20" r="7" fill="#f6b73c"/>
+          </svg>
+          <span class="bt">周妍希巴厘岛</span>
+        </div>
+        <p class="fline">把八天七晚拆成清晨、正午、傍晚三种光线节奏，记录每个坐标的实际等待时间与门票。</p>
+      </div>
+      <div>
+        <h4>行程内容</h4>
+        <a href="/#picks">精选机位</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <a href="/#cats">梯田与稻田</a>
+        <a href="/#cats">断崖日落</a>
+        <a href="/#cats">近岸浮潜</a>
+        <a href="/#cats">寺庙与仪式</a>
+      </div>
+      <div>
+        <h4>互动与参考</h4>
+        <a href="/#comments">用户评论</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#rank">口碑榜</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>页面内容含示例数据与个人实测记录，门票与班次以现场告示为准。更新日期：2026年11月8日，对应“海神庙涨潮通道”与“乌鲁瓦图日落排队实测”两项。</span>
+      <span>© 2026 周妍希巴厘岛 · 行程影像记录</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" aria-label="回到顶部" title="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menubtn = document.getElementById('menubtn');
+  var nav = document.getElementById('nav');
+  if(menubtn && nav){
+    menubtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menubtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.matchMedia('(max-width:960px)').matches){
+        nav.classList.remove('open');
+        menubtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var toTop = document.getElementById('totop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 600){ toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var snavLinks = Array.prototype.slice.call(document.querySelectorAll('#snav a'));
+  var sections = snavLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+  var spy = null;
+  function onSpy(){
+    var pos = window.scrollY + 180;
+    var current = null;
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos){ current = sec.id; }
+    });
+    snavLinks.forEach(function(a){
+      a.classList.toggle('on', a.getAttribute('href') === '/#' + current);
+    });
+  }
+  window.addEventListener('scroll', function(){
+    if(spy) return;
+    spy = requestAnimationFrame(function(){ onSpy(); spy = null; });
+  }, {passive:true});
+  onSpy();
+
+  var q = document.getElementById('q');
+  var res = document.getElementById('res');
+  var index = [];
+  document.querySelectorAll('main section.block').forEach(function(sec){
+    index.push({id: sec.id, text: sec.querySelector('h2').textContent, kind:'栏目'});
+  });
+  document.querySelectorAll('main .pick h3, main .timeline h3, main .newslist a, main details.faq summary, main .rank li, main .tagindex a, main .cat, main .steps li strong').forEach(function(el){
+    var t = el.textContent.trim();
+    if(!t) return;
+    var host = el.closest('[id]');
+    index.push({id: host ? host.id : 'main', text: t, kind:'条目'});
+  });
+  function runSearch(){
+    var v = (q.value || '').trim().toLowerCase();
+    if(!v){ res.classList.remove('show'); res.innerHTML = ''; return; }
+    var seen = {}, hits = [];
+    index.forEach(function(it){
+      var key = it.text + '|' + it.id;
+      if(seen[key]) return;
+      if(it.text.toLowerCase().indexOf(v) > -1){
+        seen[key] = 1; hits.push(it);
+      }
+    });
+    if(!hits.length){
+      res.innerHTML = '<div class="none">没有匹配“' + q.value.replace(/[<>&]/g,'') + '”的条目，试试“梯田”“浮潜”“海神庙”。</div>';
+    } else {
+      res.innerHTML = hits.slice(0,8).map(function(it){
+        return '<a href="/#' + it.id + '">' + it.text + ' <small style="color:#4a5a5c">· ' + it.kind + '</small></a>';
+      }).join('');
+    }
+    res.classList.add('show');
+  }
+  var t = null;
+  q.addEventListener('input', function(){
+    clearTimeout(t);
+    t = setTimeout(runSearch, 120);
+  });
+  q.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+  document.addEventListener('click', function(e){
+    if(!res.contains(e.target) && e.target !== q){ res.classList.remove('show'); }
+  });
+})();
+</script>
+</body>
+</html>
