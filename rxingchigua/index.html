@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>r星吃瓜-反差大赛今日赛事观察站</title>
+<meta name="description" content="r星吃瓜是聚焦反差大赛与今日赛事的观察站，整理赛程时间表、选手反差素材、评审规则变化与赛后评论，附FAQ和深度解析，帮你看懂每一场对决的看点与争议。">
+<meta name="keywords" content="r星吃瓜">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231b1b2b'/%3E%3Cpath d='M32 10l6 14 15 2-11 10 3 15-13-8-13 8 3-15-11-10 15-2z' fill='%23ff5d73'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f6f4ef;
+  --surface:#ffffff;
+  --ink:#1b1b2b;
+  --ink-soft:#4a4a58;
+  --muted:#7a7a88;
+  --line:#e3ded4;
+  --brand:#c8324a;
+  --brand-deep:#8f1f33;
+  --accent:#2f6f5e;
+  --accent-soft:#e7f1ed;
+  --warn:#b57a12;
+  --gold:#d9a441;
+  --radius-s:6px;
+  --radius-m:12px;
+  --radius-l:20px;
+  --shadow-s:0 1px 2px rgba(27,27,43,.06);
+  --shadow-m:0 6px 18px rgba(27,27,43,.08);
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:24px;--sp-6:32px;--sp-7:48px;--sp-8:64px;
+  --fs-1:12px;--fs-2:13px;--fs-3:14px;--fs-4:16px;--fs-5:18px;--fs-6:22px;--fs-7:28px;--fs-8:36px;--fs-9:46px;
+  --sticky-offset:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky-offset)}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  font-size:var(--fs-4);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.3;margin:0;font-weight:700;letter-spacing:.01em}
+p{margin:0 0 var(--sp-3)}
+ul,ol{margin:0;padding-left:1.2em}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.skip{position:absolute;left:-9999px;top:0;background:var(--brand);color:#fff;padding:10px 16px;z-index:200;border-radius:0 0 var(--radius-s) 0}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* ============ 吸顶区 ============ */
+.sticky-shell{position:sticky;top:0;z-index:100;box-shadow:var(--shadow-s)}
+.announce{
+  background:linear-gradient(90deg,var(--ink) 0%,#2b2b40 60%,#3a2030 100%);
+  color:#f2eee6;font-size:var(--fs-2);
+}
+.announce .wrap{display:flex;gap:var(--sp-3);align-items:center;justify-content:space-between;padding:7px 0;flex-wrap:wrap}
+.announce .tag{background:var(--brand);color:#fff;font-weight:700;padding:1px 8px;border-radius:999px;font-size:11px;letter-spacing:.08em}
+.announce p{margin:0;flex:1 1 320px;line-height:1.5}
+.announce a{color:#ffd9a0;white-space:nowrap}
+
+.site-head{background:rgba(246,244,239,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.head-row{display:flex;align-items:center;gap:var(--sp-4);padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand .mark{width:38px;height:38px;flex:0 0 auto}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-text b{font-size:var(--fs-5);letter-spacing:.02em}
+.brand-text span{font-size:11px;color:var(--muted);letter-spacing:.14em}
+.nav-main{display:flex;gap:2px;flex:1 1 auto;flex-wrap:wrap}
+.nav-main a{font-size:var(--fs-3);color:var(--ink-soft);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.nav-main a:hover{background:#eae5da;text-decoration:none;color:var(--ink)}
+.nav-main a.is-active{background:var(--ink);color:#fff}
+.head-tools{display:flex;align-items:center;gap:var(--sp-2);flex:0 0 auto}
+.search{display:flex;align-items:center;border:1px solid var(--line);background:#fff;border-radius:999px;padding:2px 2px 2px 12px;gap:6px}
+.search input{border:0;background:transparent;font:inherit;font-size:var(--fs-2);width:132px;padding:5px 0;color:var(--ink)}
+.search input:focus{outline:none}
+.search button{border:0;background:var(--ink);color:#fff;border-radius:999px;font:inherit;font-size:var(--fs-2);padding:5px 12px;cursor:pointer}
+.search button:hover{background:var(--brand)}
+.search-feedback{font-size:var(--fs-2);color:var(--brand-deep);min-height:0;padding:0 0 6px}
+.menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:var(--radius-s);padding:6px 10px;font:inherit;font-size:var(--fs-2);cursor:pointer;align-items:center;gap:6px}
+.menu-btn svg{width:16px;height:16px}
+
+/* ============ Hero ============ */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 85% 0%,#3b1e2a 0%,#1b1b2b 55%,#151521 100%);color:#f4f0e8}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:var(--sp-7);align-items:center;padding:var(--sp-8) 0 var(--sp-7)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-2);letter-spacing:.18em;color:#ffbfae;text-transform:uppercase;margin-bottom:var(--sp-3)}
+.hero-eyebrow::before{content:"";width:26px;height:2px;background:var(--brand)}
+.hero h1{font-size:clamp(30px,5.2vw,var(--fs-9));letter-spacing:.02em;margin-bottom:var(--sp-3)}
+.hero h1 em{font-style:normal;color:#ff8a92}
+.hero-lead{font-size:var(--fs-5);color:#d9d3c7;max-width:36em;margin-bottom:var(--sp-5)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-bottom:var(--sp-6)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-size:var(--fs-3);font-weight:700;transition:transform .18s ease,background .18s ease;border:1px solid transparent}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:#e04a60}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:#f4f0e8}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12);border-radius:var(--radius-m);overflow:hidden;max-width:520px}
+.hero-stats div{background:rgba(20,20,32,.55);padding:12px 14px}
+.hero-stats b{display:block;font-size:var(--fs-6);color:#ffd9a0;line-height:1.2;font-variant-numeric:tabular-nums}
+.hero-stats span{font-size:12px;color:#b9b3a8;letter-spacing:.04em}
+.hero-visual{position:relative;display:grid;place-items:center;min-height:340px}
+.hero-visual svg{width:100%;max-width:420px;height:auto;filter:drop-shadow(0 18px 40px rgba(0,0,0,.45))}
+.hero-note{margin-top:var(--sp-4);font-size:12px;color:#a9a396;text-align:center;letter-spacing:.05em}
+
+/* ============ 主体布局 ============ */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 316px;gap:var(--sp-6);align-items:start;padding:var(--sp-7) 0}
+main{min-width:0}
+section.block{margin-bottom:var(--sp-7);scroll-margin-top:var(--sticky-offset)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-3);margin-bottom:var(--sp-4);padding-bottom:var(--sp-2);border-bottom:2px solid var(--ink)}
+.sec-head h2{font-size:var(--fs-6)}
+.sec-head h2 small{display:block;font-size:11px;font-weight:400;letter-spacing:.2em;color:var(--muted);margin-top:2px}
+.sec-head .more{font-size:var(--fs-2);white-space:nowrap;color:var(--brand-deep)}
+.kicker{font-size:11px;letter-spacing:.16em;color:var(--brand);font-weight:700;text-transform:uppercase;margin-bottom:var(--sp-2)}
+
+/* 领域概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3)}
+.ov-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-4);box-shadow:var(--shadow-s)}
+.ov-card b{display:block;font-size:var(--fs-6);color:var(--brand-deep);font-variant-numeric:tabular-nums;line-height:1.2}
+.ov-card span{font-size:var(--fs-2);color:var(--muted)}
+.ov-card p{font-size:var(--fs-3);margin:var(--sp-2) 0 0;color:var(--ink-soft)}
+.overview-text{background:linear-gradient(180deg,#fff,#fbf9f4);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-5);margin-top:var(--sp-3)}
+.overview-text p:last-child{margin-bottom:0}
+
+/* 精选推荐 —— 非对称网格 */
+.feature{display:grid;grid-template-columns:1.25fr 1fr;gap:var(--sp-3)}
+.f-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-s);transition:transform .18s ease,box-shadow .18s ease}
+.f-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-m)}
+.f-card img{width:100%;height:170px;object-fit:cover}
+.f-card .body{padding:var(--sp-4);flex:1;display:flex;flex-direction:column}
+.f-card .meta{font-size:11px;color:var(--muted);letter-spacing:.08em;margin-bottom:6px}
+.f-card h3{font-size:var(--fs-5);margin-bottom:var(--sp-2)}
+.f-card p{font-size:var(--fs-3);color:var(--ink-soft);margin:0 0 var(--sp-3)}
+.f-card .tagrow{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:11px;background:#efeade;color:var(--ink-soft);border-radius:999px;padding:2px 9px;white-space:nowrap}
+.chip.hot{background:#fdeaea;color:var(--brand-deep)}
+.f-side{display:grid;gap:var(--sp-3);grid-template-rows:1fr 1fr}
+.f-mini{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-4);box-shadow:var(--shadow-s)}
+.f-mini h3{font-size:var(--fs-4);margin-bottom:4px}
+.f-mini p{font-size:var(--fs-2);color:var(--muted);margin:0}
+
+/* 最新更新 —— 紧凑列表 */
+.updates{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden}
+.up-row{display:grid;grid-template-columns:64px 1fr auto;gap:var(--sp-3);align-items:center;padding:11px var(--sp-4);border-bottom:1px dashed var(--line)}
+.up-row:last-child{border-bottom:0}
+.up-row .t{font-size:var(--fs-2);color:var(--muted);font-variant-numeric:tabular-nums}
+.up-row .txt{font-size:var(--fs-3);min-width:0}
+.up-row .txt b{font-weight:600}
+.up-row .txt span{color:var(--muted);font-size:var(--fs-2);display:block}
+.badge{font-size:11px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--ink-soft);white-space:nowrap}
+.badge.new{background:var(--accent-soft);border-color:#c8e0d7;color:var(--accent)}
+.badge.fix{background:#fff4e2;border-color:#f0dcb6;color:var(--warn)}
+
+/* 分类入口 —— 标签索引 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:var(--sp-2)}
+.cat{display:flex;flex-direction:column;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);padding:10px 12px;transition:border-color .16s,background .16s}
+.cat:hover{border-color:var(--brand);background:#fff8f7;text-decoration:none}
+.cat b{font-size:var(--fs-3);color:var(--ink)}
+.cat span{font-size:11px;color:var(--muted)}
+
+/* 深度解析 —— 分栏正文 */
+.deep{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-l);padding:var(--sp-6);box-shadow:var(--shadow-s)}
+.deep-head{display:grid;grid-template-columns:1fr auto;gap:var(--sp-4);align-items:start;margin-bottom:var(--sp-5)}
+.deep-head h2{font-size:var(--fs-7)}
+.deep-head .verdict{background:var(--ink);color:#f4f0e8;border-radius:var(--radius-m);padding:var(--sp-3) var(--sp-4);font-size:var(--fs-2);max-width:230px;line-height:1.6}
+.deep-head .verdict b{color:#ffd9a0;display:block;margin-bottom:4px;font-size:11px;letter-spacing:.14em}
+.deep-body{column-count:2;column-gap:var(--sp-6);font-size:var(--fs-4);line-height:1.9}
+.deep-body h3{break-after:avoid;font-size:var(--fs-5);margin:var(--sp-4) 0 var(--sp-2);color:var(--brand-deep);column-span:none}
+.deep-body h3:first-child{margin-top:0}
+.deep-body p{break-inside:avoid-column}
+.deep-body ul{break-inside:avoid}
+.deep-body .pull{font-size:var(--fs-5);font-weight:700;color:var(--ink);border-left:4px solid var(--gold);padding-left:var(--sp-3);margin:var(--sp-4) 0;line-height:1.6}
+.fact-table{width:100%;border-collapse:collapse;font-size:var(--fs-2);margin:var(--sp-2) 0 var(--sp-4);break-inside:avoid}
+.fact-table th,.fact-table td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+.fact-table th{background:#f2eee5;font-weight:700;color:var(--ink)}
+.fact-table td{color:var(--ink-soft)}
+
+/* 体验指南 —— 编号步骤 */
+.steps{display:grid;gap:var(--sp-3);counter-reset:step}
+.step{display:grid;grid-template-columns:44px 1fr;gap:var(--sp-3);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-4);box-shadow:var(--shadow-s)}
+.step::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-size:var(--fs-6);font-weight:800;color:#d9d1c0;line-height:1;font-variant-numeric:tabular-nums}
+.step h3{font-size:var(--fs-5);margin-bottom:4px}
+.step p{font-size:var(--fs-3);margin:0;color:var(--ink-soft)}
+
+/* 对照面板 —— 反差评审判定 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3)}
+.panel{border-radius:var(--radius-m);padding:var(--sp-4);border:1px solid var(--line);background:var(--surface)}
+.panel h3{font-size:var(--fs-4);margin-bottom:var(--sp-2);display:flex;align-items:center;gap:8px}
+.panel h3 .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+.panel.yes h3 .dot{background:var(--accent)}
+.panel.no h3 .dot{background:var(--brand)}
+.panel ul{font-size:var(--fs-3);color:var(--ink-soft);margin:0}
+.panel li{margin-bottom:6px}
+.panel li:last-child{margin-bottom:0}
+
+/* FAQ */
+.faq{display:grid;gap:var(--sp-2)}
+details.faq-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:0 16px;box-shadow:var(--shadow-s)}
+details.faq-item[open]{border-color:#cdbfae;background:#fffdf9}
+details.faq-item summary{list-style:none;cursor:pointer;padding:13px 26px 13px 0;font-weight:600;font-size:var(--fs-4);position:relative}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:20px;color:var(--brand);line-height:1;transition:transform .2s}
+details.faq-item[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details.faq-item .ans{padding:0 0 14px;font-size:var(--fs-3);color:var(--ink-soft);line-height:1.85}
+
+/* 评论 */
+.comments{display:grid;gap:var(--sp-3)}
+.cmt{display:grid;grid-template-columns:40px 1fr;gap:var(--sp-3);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-4)}
+.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:var(--fs-3);color:#fff;background:var(--ink)}
+.cmt:nth-child(2) .avatar{background:var(--accent)}
+.cmt:nth-child(3) .avatar{background:var(--brand)}
+.cmt:nth-child(4) .avatar{background:#7b5ea7}
+.cmt-top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:3px}
+.cmt-top b{font-size:var(--fs-3)}
+.cmt-top time{font-size:11px;color:var(--muted)}
+.cmt p{font-size:var(--fs-3);margin:0;color:var(--ink-soft)}
+.cmt .quote{display:block;border-left:3px solid var(--line);padding-left:8px;color:var(--muted);font-size:var(--fs-2);margin:6px 0 0}
+.like{font-size:var(--fs-2);color:var(--muted);margin-top:6px;display:inline-block}
+
+/* 资讯 + 榜单 */
+.news-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--sp-4)}
+.news-list{display:grid;gap:var(--sp-2)}
+.news-item{display:grid;grid-template-columns:auto 1fr;gap:var(--sp-3);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-3) var(--sp-4)}
+.news-item time{font-size:11px;color:var(--muted);white-space:nowrap;padding-top:3px;font-variant-numeric:tabular-nums}
+.news-item h3{font-size:var(--fs-4);margin-bottom:3px}
+.news-item p{font-size:var(--fs-2);color:var(--ink-soft);margin:0}
+.rank{background:linear-gradient(180deg,#fffdf8,#f7f2e8);border:1px solid #e6dcc9;border-radius:var(--radius-m);padding:var(--sp-4)}
+.rank h3{font-size:var(--fs-5);margin-bottom:var(--sp-2)}
+.rank ol{margin:0;padding:0;list-style:none;counter-reset:r}
+.rank li{counter-increment:r;display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:center;padding:7px 0;border-bottom:1px dashed #e6dcc9;font-size:var(--fs-3)}
+.rank li:last-child{border-bottom:0}
+.rank li::before{content:counter(r);font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums}
+.rank li span.score{font-size:var(--fs-2);color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* 时间线 */
+.timeline{position:relative;padding-left:22px;margin-top:var(--sp-2)}
+.timeline::before{content:"";position:absolute;left:5px;top:4px;bottom:4px;width:2px;background:linear-gradient(180deg,var(--brand),#e7cfa6)}
+.tl-item{position:relative;padding:0 0 var(--sp-4) 4px}
+.tl-item::before{content:"";position:absolute;left:-21px;top:7px;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--brand)}
+.tl-item time{font-size:var(--fs-2);color:var(--brand-deep);font-weight:700;font-variant-numeric:tabular-nums}
+.tl-item p{font-size:var(--fs-3);margin:2px 0 0;color:var(--ink-soft)}
+
+/* 相关推荐 */
+.rel-tags{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
+.rel-tags a{font-size:var(--fs-3);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;color:var(--ink-soft)}
+.rel-tags a:hover{border-color:var(--brand);color:var(--brand-deep);text-decoration:none;background:#fff8f7}
+
+/* 侧栏 */
+.side{display:grid;gap:var(--sp-4);position:sticky;top:calc(var(--sticky-offset) + 12px)}
+.side-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-4);box-shadow:var(--shadow-s)}
+.side-card h3{font-size:var(--fs-4);margin-bottom:var(--sp-2);padding-bottom:8px;border-bottom:1px solid var(--line)}
+.side-nav{display:grid;gap:2px}
+.side-nav a{font-size:var(--fs-3);padding:6px 10px;border-radius:var(--radius-s);color:var(--ink-soft);border-left:3px solid transparent}
+.side-nav a:hover{background:#f4f0e7;text-decoration:none}
+.side-nav a.on{background:#fdeaea;color:var(--brand-deep);border-left-color:var(--brand);font-weight:600}
+.side-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.side-list li{font-size:var(--fs-3);line-height:1.5}
+.side-list li span{display:block;font-size:11px;color:var(--muted)}
+.side-quote{font-size:var(--fs-3);color:var(--ink-soft);border-left:3px solid var(--gold);padding-left:10px}
+.side-card .note{font-size:11px;color:var(--muted);margin:var(--sp-2) 0 0}
+
+/* 页脚 */
+.site-foot{background:var(--ink);color:#cfc9bd;margin-top:var(--sp-6)}
+.foot-main{display:grid;grid-template-columns:1.3fr 2fr;gap:var(--sp-6);padding:var(--sp-7) 0 var(--sp-5)}
+.foot-brand .brand-text b{color:#fff}
+.foot-brand p{font-size:var(--fs-3);color:#a9a396;margin:var(--sp-3) 0 0;max-width:30em}
+.foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-4)}
+.foot-cols h4{font-size:var(--fs-3);color:#fff;margin-bottom:var(--sp-2);font-weight:700}
+.foot-cols ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.foot-cols a{color:#b7b1a4;font-size:var(--fs-2)}
+.foot-cols a:hover{color:#ffd9a0}
+.foot-bottom{border-top:1px solid #33334a;padding:var(--sp-4) 0 var(--sp-6);font-size:var(--fs-2);color:#8f8a7e;display:flex;flex-wrap:wrap;gap:var(--sp-3);justify-content:space-between}
+.foot-bottom p{margin:0}
+
+/* 回到顶部 */
+.to-top{position:fixed;right:18px;bottom:18px;z-index:120;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);box-shadow:var(--shadow-m);cursor:pointer;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top svg{width:18px;height:18px}
+
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;gap:var(--sp-5);padding:var(--sp-6) 0}
+  .hero-visual{order:-1;min-height:220px}
+  .hero-visual svg{max-width:300px}
+  .layout{grid-template-columns:1fr;gap:var(--sp-6)}
+  .side{position:static;grid-template-columns:1fr 1fr;display:grid}
+  .deep-body{column-count:1}
+  .news-grid{grid-template-columns:1fr}
+  .foot-main{grid-template-columns:1fr;gap:var(--sp-5)}
+  .feature{grid-template-columns:1fr}
+  .f-side{grid-template-rows:auto auto}
+  .overview-grid{grid-template-columns:1fr 1fr}
+  .nav-main{order:3;width:100%;display:none}
+  .nav-main.open{display:flex}
+  .menu-btn{display:inline-flex}
+  .head-row{flex-wrap:wrap;row-gap:8px}
+  .head-tools{margin-left:auto}
+}
+@media (max-width:620px){
+  :root{--fs-9:34px;--fs-8:28px;--fs-7:23px;--fs-6:20px}
+  .wrap{width:calc(100% - 28px)}
+  .hero-stats{grid-template-columns:repeat(3,1fr);max-width:none}
+  .hero-stats div{padding:9px 10px}
+  .search input{width:100px}
+  .deep{padding:var(--sp-4)}
+  .deep-head{grid-template-columns:1fr}
+  .deep-head .verdict{max-width:none}
+  .compare,.overview-grid,.foot-cols{grid-template-columns:1fr}
+  .side{grid-template-columns:1fr}
+  .up-row{grid-template-columns:54px 1fr;gap:8px}
+  .up-row .badge{grid-column:2;justify-self:start}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .foot-bottom{flex-direction:column;gap:6px}
+  .to-top{right:12px;bottom:14px}
+  .step{grid-template-columns:34px 1fr;padding:var(--sp-3)}
+  .cmt{grid-template-columns:32px 1fr;gap:10px}
+  .avatar{width:32px;height:32px;font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .f-card:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="sticky-shell">
+  <div class="announce" role="region" aria-label="站点更新公告">
+    <div class="wrap">
+      <span class="tag">速报</span>
+      <p><strong>r星吃瓜</strong> 11月8日赛程已更新：反差赛 A 组第 3 轮 19:30 开赛，B 组延期至 11月10日；裁判复核记录同步上线，点击查看《反差素材判定表 v2.3》修订条目。</p>
+      <a href="#updates">查看更新明细 →</a>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <div class="wrap">
+      <div class="head-row">
+        <a class="brand" href="/#" aria-label="r星吃瓜 首页">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="#1b1b2b"/>
+            <path d="M32 9l6.2 14.6L54 25.6 43.3 35.8 46.2 51 32 42.9 17.8 51l2.9-15.2L10 25.6l15.8-2z" fill="#c8324a"/>
+            <circle cx="32" cy="30" r="5.4" fill="#f6f4ef"/>
+            <path d="M18 52c4-7 9-10 14-10s10 3 14 10" fill="none" stroke="#f6f4ef" stroke-width="2.6" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-text"><b>r星吃瓜</b><span>CONTRAST ARENA</span></span>
+        </a>
+
+        <nav class="nav-main" id="navMain" aria-label="主题导航">
+          <a href="#overview" class="is-active">反差大赛</a>
+          <a href="#feature">今日精选</a>
+          <a href="#updates">赛程更新</a>
+          <a href="#categories">赛事分类</a>
+          <a href="#deep">深度解析</a>
+          <a href="#guide">观赛指南</a>
+          <a href="#faq">常见问答</a>
+          <a href="#comments">赛后评论</a>
+        </nav>
+
+        <div class="head-tools">
+          <form class="search" role="search" id="searchForm" onsubmit="return false;">
+            <label for="q" class="skip">站内搜索</label>
+            <input id="q" type="search" placeholder="搜选手/赛程/判定" autocomplete="off">
+            <button type="submit" id="searchBtn">查找</button>
+          </form>
+          <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navMain">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            菜单
+          </button>
+        </div>
+      </div>
+      <div class="search-feedback" id="searchFeedback" aria-live="polite"></div>
+    </div>
+  </header>
+</div>
+
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="wrap">
+    <div>
+      <span class="hero-eyebrow">2026 反差季 · 第 11 期</span>
+      <h1 id="heroTitle">r星吃瓜</h1>
+      <p class="hero-lead">把反差大赛的赛程、素材和判定拆开来看。11月8日共有 6 场对局，A 组第 3 轮与“旧截图翻新”复审同时进行；每场附原始素材时间、选手报名组别和裁判投票记录。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#updates">查看今日赛程 →</a>
+        <a class="btn btn-ghost" href="#deep">读判定解析</a>
+      </div>
+      <div class="hero-stats" aria-label="赛事规模">
+        <div><b>6</b><span>11月8日场次</span></div>
+        <div><b>48</b><span>在册选手</span></div>
+        <div><b>2.3</b><span>判定表版本</span></div>
+      </div>
+      <p class="hero-note">数据口径：赛事报名系统导出 + 裁判组群公告，统计截至 11月8日 09:00</p>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 420 340" role="img">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff8a92"/><stop offset="1" stop-color="#c8324a"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#2f6f5e"/><stop offset="1" stop-color="#5fb59d"/>
+          </linearGradient>
+        </defs>
+        <circle cx="210" cy="168" r="128" fill="none" stroke="#3c3c55" stroke-width="1.5" stroke-dasharray="4 8"/>
+        <circle cx="210" cy="168" r="96" fill="none" stroke="#4a4a66" stroke-width="1"/>
+        <rect x="62" y="118" width="118" height="88" rx="10" fill="url(#g2)" opacity=".92"/>
+        <rect x="240" y="118" width="118" height="88" rx="10" fill="url(#g1)" opacity=".92"/>
+        <text x="121" y="158" text-anchor="middle" fill="#0e1c18" font-size="15" font-weight="700" font-family="sans-serif">日常形象</text>
+        <text x="121" y="180" text-anchor="middle" fill="#0e1c18" font-size="11" font-family="sans-serif">编号 A-17</text>
+        <text x="299" y="158" text-anchor="middle" fill="#2a0d13" font-size="15" font-weight="700" font-family="sans-serif">反差瞬间</text>
+        <text x="299" y="180" text-anchor="middle" fill="#2a0d13" font-size="11" font-family="sans-serif">编号 A-17</text>
+        <path d="M186 162h44" stroke="#f6f4ef" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M222 154l10 8-10 8" fill="none" stroke="#f6f4ef" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <g transform="translate(210 262)">
+          <rect x="-54" y="-16" width="108" height="32" rx="16" fill="#1b1b2b" stroke="#4a4a66"/>
+          <text x="0" y="6" text-anchor="middle" fill="#ffd9a0" font-size="13" font-family="sans-serif">判定表 v2.3</text>
+        </g>
+        <circle cx="210" cy="40" r="7" fill="#d9a441"/>
+        <circle cx="92" cy="262" r="5" fill="#c8324a"/>
+        <circle cx="332" cy="272" r="5" fill="#5fb59d"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+<main id="main">
+
+  <!-- 1 领域概览 -->
+  <section class="block" id="overview" aria-labelledby="ovTitle">
+    <div class="sec-head"><h2 id="ovTitle">反差大赛是什么：一次说清赛制与分组<small>OVERVIEW</small></h2></div>
+    <div class="overview-grid">
+      <div class="ov-card"><b>A / B</b><span>两个主赛组</span><p>A 组为个人反差，B 组为搭档反差，报名时二选一，赛季内不可换组。</p></div>
+      <div class="ov-card"><b>3 轮</b><span>小组轮次</span><p>每轮提交 1 组“日常素材 + 反差素材”，两段素材需同一人或同一搭档。</p></div>
+      <div class="ov-card"><b>5 人</b><span>裁判席</span><p>评审含 3 名内容裁判与 2 名规则裁判，规则裁判只看素材合规性。</p></div>
+    </div>
+    <div class="overview-text">
+      <p>反差大赛的核心规则只有一句：同一个人在日常状态与特定场景下的表现差异，要靠材料自证。参赛者提交两条素材——一条日常向、一条反差向，裁判按“差异幅度、可核对性、叙事完整度”三项打分。差异幅度看动作与表情变化区间，可核对性看素材是否带原始发布时间和设备信息，叙事完整度看两条素材能否拼出一段说得通的情境。</p>
+      <p>分组按报名表里的“反差类型”归类：形象反差、身份反差、技能反差、场景反差四类，分别进 A-1 到 A-4 与 B-1 到 B-2 六个赛道。11月8日进行的是 A-1 与 A-3 的第 3 轮，B 组因场地审核顺延至 11月10日。选手编号如 A-17、B-06，对应报名系统里的实名记录，查分时可直接对照。</p>
+      <p>评分不是简单加总：三项各 10 分，但“可核对性”低于 6 分时总分按 8 折计，这条自 v2.1 起生效。11月7日裁判组公布的 v2.3 只是把“原始发布时间”的认定从截图放宽到带时间水印的录屏，其他不变。改这一条，是因为 A-09 选手的录屏在旧规下被误判。</p>
+    </div>
+  </section>
+
+  <!-- 2 精选内容推荐 -->
+  <section class="block" id="feature" aria-labelledby="ftTitle">
+    <div class="sec-head"><h2 id="ftTitle">今日精选：值得先看的四组反差素材<small>EDITOR'S PICK</small></h2><a class="more" href="#updates">全部赛程 →</a></div>
+    <div class="feature">
+      <article class="f-card">
+        <img src="https://picsum.photos/seed/rstar-contrast-a17/640/360" width="640" height="360" loading="lazy" alt="A-17 选手在仓库场景的录屏截图，工装与礼服两帧对照" style="object-fit:cover">
+        <div class="body">
+          <span class="meta">A-1 赛道 · 11月8日 19:30</span>
+          <h3>A-17“仓库到红毯”：两帧同一背景，判定表 v2.3 首次适用</h3>
+          <p>录屏第 12 秒到第 40 秒背景货架编号一致，服装从蓝色工装换为黑色礼服。规则裁判林某在群里备注“时间水印清晰，按新版认定”。</p>
+          <div class="tagrow"><span class="chip hot">今晚主赛</span><span class="chip">录屏自证</span><span class="chip">形象反差</span></div>
+        </div>
+      </article>
+      <div class="f-side">
+        <article class="f-mini">
+          <span class="meta">A-3 赛道 · 已结束</span>
+          <h3>退役消防员 A-09 的“卸甲”片段，8.6 分暂列本周第一</h3>
+          <p>素材原始发布时间 11月6日 21:14，裁判投票 4:1，唯一反对意见针对“剪辑点过密”。</p>
+        </article>
+        <article class="f-mini">
+          <span class="meta">B 组 · 延期</span>
+          <h3>B-06 双人搭档“早班与夜班”顺延至 11月10日</h3>
+          <p>场地审核未过，选手已确认调档；原定 11月8日 20:40 的场次作废，门票按原渠道退。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 最新更新 -->
+  <section class="block" id="updates" aria-labelledby="upTitle">
+    <div class="sec-head"><h2 id="upTitle">赛程与规则更新明细<small>LIVE UPDATES</small></h2></div>
+    <div class="updates">
+      <div class="up-row"><span class="t">今天 09:00</span><div class="txt"><b>A 组第 3 轮出场顺序公布</b><span>顺序：A-17 → A-09 → A-04 → A-22 → A-12 → A-08</span></div><span class="badge new">新</span></div>
+      <div class="up-row"><span class="t">今天 08:40</span><div class="txt"><b>判定表 v2.3 生效</b><span>录屏带时间水印可作原始发布时间凭证</span></div><span class="badge fix">修订</span></div>
+      <div class="up-row"><span class="t">昨天 21:14</span><div class="txt"><b>A-09 素材上传完成</b><span>视频时长 1 分 52 秒，含设备信息栏</span></div><span class="badge">提交</span></div>
+      <div class="up-row"><span class="t">昨天 18:20</span><div class="txt"><b>B 组场次延期通知</b><span>B-06 改至 11月10日 19:00，裁判席不变</span></div><span class="badge fix">延期</span></div>
+      <div class="up-row"><span class="t">11月6日</span><div class="txt"><b>裁判组复核记录开放查询</b><span>按选手编号查投票明细，含反对意见原文</span></div><span class="badge new">新</span></div>
+      <div class="up-row"><span class="t">11月5日</span><div class="txt"><b>A-04 补充材料通过初审</b><span>补交 3 张带时间戳的相册原图</span></div><span class="badge">提交</span></div>
+    </div>
+  </section>
+
+  <!-- 4 分类入口 -->
+  <section class="block" id="categories" aria-labelledby="catTitle">
+    <div class="sec-head"><h2 id="catTitle">按赛道找对局<small>CHANNELS</small></h2></div>
+    <div class="cat-grid">
+      <a class="cat" href="#feature"><b>形象反差</b><span>A-1 赛道 · 12 人</span></a>
+      <a class="cat" href="#feature"><b>身份反差</b><span>A-2 赛道 · 9 人</span></a>
+      <a class="cat" href="#feature"><b>技能反差</b><span>A-3 赛道 · 11 人</span></a>
+      <a class="cat" href="#feature"><b>场景反差</b><span>A-4 赛道 · 8 人</span></a>
+      <a class="cat" href="#feature"><b>搭档反差</b><span>B-1 赛道 · 5 组</span></a>
+      <a class="cat" href="#feature"><b>日常素材</b><span>全部选手的第一条素材</span></a>
+      <a class="cat" href="#deep"><b>裁判判定表</b><span>v2.3 修订条目对照</span></a>
+      <a class="cat" href="#comments"><b>赛后争议</b><span>反对票与选手回应</span></a>
+      <a class="cat" href="#rank"><b>本周榜单</b><span>按加权总分排序</span></a>
+      <a class="cat" href="#news"><b>赛事资讯</b><span>延期、复核、报名</span></a>
+      <a class="cat" href="#guide"><b>观赛指南</b><span>怎么看懂一条素材</span></a>
+      <a class="cat" href="#faq"><b>报名与申诉</b><span>常见问题 7 条</span></a>
+    </div>
+  </section>
+
+  <!-- 5 深度解析 -->
+  <section class="block" id="deep" aria-labelledby="deepTitle">
+    <article class="deep">
+      <div class="deep-head">
+        <div>
+          <div class="kicker">深度解析 · 唯一主体阅读区</div>
+          <h2 id="deepTitle">反差不是越大越好：v2.3 之后，可核对性开始压过视觉冲击</h2>
+        </div>
+        <div class="verdict"><b>核心判断</b>在 v2.3 下，一条“反差极大但无时间水印”的素材，实际得分低于一条“反差中等但带完整录屏”的素材，差幅可达 1.5 到 2 分。</div>
+      </div>
+      <div class="deep-body">
+        <h3>一、判定表 v2.1 到 v2.3 到底改了什么</h3>
+        <p>11月7日裁判组在赛事群发出 v2.3，改动只有一条：原始发布时间的认定范围从“截图 + 平台后台”扩展到“带时间水印的录屏”。前后版本对比如下，可以逐条核对。</p>
+        <table class="fact-table">
+          <thead><tr><th>条目</th><th>v2.1（9月起）</th><th>v2.3（11月7日起）</th></tr></thead>
+          <tbody>
+            <tr><td>原始时间凭证</td><td>截图或平台后台页</td><td>增加带时间水印的录屏</td></tr>
+            <tr><td>可核对性折分</td><td>低于 6 分按 8 折</td><td>不变</td></tr>
+            <tr><td>剪辑点密度</td><td>未设上限</td><td>未设上限，仅作裁判备注</td></tr>
+            <tr><td>搭档素材一致性</td><td>B 组需两人同框</td><td>不变</td></tr>
+          </tbody>
+        </table>
+        <p>A-09 是这个改动的直接受益者。退役消防员的卸甲片段在 v2.1 下只交了截图，初审判定可核对性 5 分，总分被 8 折压到 7.0；补交带水印录屏后按 v2.3 重算，可核对性升到 8 分，总分 8.6，暂列本周第一。</p>
+
+        <h3>二、支持方与反对方的说法差异</h3>
+        <p>裁判林某在复核记录里的原话是“水印录屏的连续性比截图强，能排除事后补拍”。反对票来自裁判周某，理由写在投票备注：A-09 的素材在 1 分 52 秒里剪了 14 刀，平均 8 秒一次画面切换，“差异被剪辑放大了，观众看到的是拼接后的效果”。</p>
+        <p>这两种说法指向同一件事的不同侧面。前者关心素材真实性，后者关心叙事呈现。v2.3 只解决了前者，没触碰剪辑密度，所以周某的反对票最终没有改变结果，但被完整记录在案。</p>
+
+        <h3>三、把判断拆成可核对的三步</h3>
+        <p>想判断一条素材会不会因规则吃亏，按下面三步查即可，不需要看总分先。</p>
+        <ul>
+          <li><strong>查凭证类型：</strong>截图、后台页、水印录屏，三类里只有前两类在 v2.1 下有效，v2.3 后三类都认。</li>
+          <li><strong>查剪辑点：</strong>数素材里的镜头切换次数。1 分钟内超过 10 刀，裁判备注栏通常会出现“节奏偏快”。</li>
+          <li><strong>查折分：</strong>可核对性若低于 6 分，先按 8 折算一遍，再和同组其他选手比。</li>
+        </ul>
+        <p class="pull">一条 8.0 分的素材折后是 6.4，比一条不折的 7.2 分低 0.8。名次差往往就出在这 0.8 上，而不是反差本身。</p>
+
+        <h3>四、11月8日两场对局的预判与依据</h3>
+        <p>A-17 的仓库到红毯素材，录屏 38 秒，切换 3 刀，背景货架编号前后一致，按上述三步查下来没有折分风险，预估落点在 8.2 到 8.5。A-04 补交的三张相册原图虽有时间戳，但缺少连续画面，若裁判严格按“连续性”理解，可核对性可能停在 7 分，落在 7.6 附近。</p>
+        <p>需要说明，这是基于公开记录的推测，不是裁判结论。裁判席的 3 名内容裁判里，有 1 人此前在 A-04 的初审中投过反对票，实际票型未必按预估走。</p>
+
+        <h3>五、这条规则的边界在哪</h3>
+        <p>v2.3 放宽凭证，客观上让更多手机录屏能进场，但也把“剪辑密度”这个变量留在了灰色地带。裁判组 11月7日的群公告只说“备注记录，不影响评分”，没有给上限数字。A-09 的 14 刀是个案，下一轮若出现 25 刀以上的素材，是否仍只备注不扣分，目前没有公开答案。</p>
+        <p>可核对的事实只有这些：改了什么、谁受益、谁反对、反对理由是什么。至于规则该不该再改，取决于 11月10日 B 组复赛后裁判组是否把剪辑密度写进 v2.4，届时复核记录会同步公开。</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 6 体验指南 -->
+  <section class="block" id="guide" aria-labelledby="gdTitle">
+    <div class="sec-head"><h2 id="gdTitle">第一次看反差赛，按这五步走<small>GUIDE</small></h2></div>
+    <div class="steps">
+      <div class="step"><div><h3>先看选手编号，再看名字</h3><p>编号如 A-17 对应报名系统实名记录，查分、查复核记录都以编号为准，名字只作辅助。</p></div></div>
+      <div class="step"><div><h3>把两条素材并排看，别只看反差那条</h3><p>日常素材决定“基线”。基线越普通，反差越可信；基线本身就很戏剧化的素材，裁判通常会在备注里质疑。</p></div></div>
+      <div class="step"><div><h3>数剪辑点，判断差异是否被放大</h3><p>1 分钟超过 10 刀就要留意。A-09 的 14 刀是公开案例，反对票正是从这一点切入。</p></div></div>
+      <div class="step"><div><h3>查可核对性是否触发折分</h3><p>低于 6 分按 8 折，这是 v2.1 起就没变过的硬规则。先折算再排名次，避免看错榜单。</p></div></div>
+      <div class="step"><div><h3>最后读复核记录里的反对意见</h3><p>支持票通常只写结论，反对票往往写理由。11月6日起按编号可查全部投票明细。</p></div></div>
+    </div>
+  </section>
+
+  <!-- 7 对照面板 -->
+  <section class="block" id="compare" aria-labelledby="cpTitle">
+    <div class="sec-head"><h2 id="cpTitle">裁判会认 / 不认的素材特征<small>CHECKLIST</small></h2></div>
+    <div class="compare">
+      <div class="panel yes">
+        <h3><span class="dot"></span>通常被认定合规</h3>
+        <ul>
+          <li>带时间水印的连续录屏，画面不中断</li>
+          <li>相册原图含设备信息与拍摄时间</li>
+          <li>日常与反差素材背景有可识别参照物，如货架编号、门牌</li>
+          <li>搭档组两人同框，且能看出同一场地</li>
+          <li>平台后台页显示发布时间与账号</li>
+        </ul>
+      </div>
+      <div class="panel no">
+        <h3><span class="dot"></span>容易被质疑或折分</h3>
+        <ul>
+          <li>只有单张截图，无上下文</li>
+          <li>剪辑点密集，1 分钟超过 10 刀且无说明</li>
+          <li>两条素材背景完全无关，无法确认同一人</li>
+          <li>人物脸部被大面积遮挡</li>
+          <li>录屏中间有黑屏跳转，时间线断开</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 FAQ -->
+  <section class="block" id="faq" aria-labelledby="faqTitle">
+    <div class="sec-head"><h2 id="faqTitle">报名、投票与申诉常见问答<small>FAQ</small></h2></div>
+    <div class="faq">
+      <details class="faq-item" open>
+        <summary>反差大赛的报名截止到什么时候？</summary>
+        <div class="ans">第 11 期报名已于 10月28日 截止，A 组 40 人、B 组 5 组已锁定。第 12 期报名预计 12月1日开放，需提交一条日常素材样片和身份证明，赛道名额在报名页实时显示。错过本期可在赛事群登记候补，出现退赛时按登记顺序补位。</div>
+      </details>
+      <details class="faq-item">
+        <summary>反差素材可以用以前拍的吗？</summary>
+        <div class="ans">可以用，但必须能证明拍摄时间在报名前 12 个月内，且与日常素材同属一人。凭证按 v2.3 认三类：带时间水印的录屏、相册原图、平台后台页。旧截图翻新是 11月7日复审的重点，A-09 补交的录屏就是按新规重新认定的。</div>
+      </details>
+      <details class="faq-item">
+        <summary>可核对性低于 6 分为什么按 8 折算？</summary>
+        <div class="ans">这项折分从 v2.1 起生效，目的是让“看着很炸但说不清来源”的素材无法靠单项高分冲榜。8 折后的分数仍参与排名，只是名次通常会后移。具体折算在评分表里单列一行，查分时能看到原始分和折算分两栏。</div>
+      </details>
+      <details class="faq-item">
+        <summary>对裁判投票有异议怎么申诉？</summary>
+        <div class="ans">在成绩公布后 48 小时内，用选手编号向规则裁判提交申诉表，附上你认为被误判的原始文件。11月6日起复核记录已开放查询，可先看投票明细和反对意见原文，再决定是否申诉。A-09 的改判就是走这条路径完成的。</div>
+      </details>
+      <details class="faq-item">
+        <summary>B 组为什么延期到 11月10日？</summary>
+        <div class="ans">B-06 搭档组的场地审核未通过，原定 11月8日 20:40 的场次作废。裁判席不变，选手已确认调档，门票按原渠道退。其余 B 组场次时间不受影响，具体名单见赛程更新板块。</div>
+      </details>
+      <details class="faq-item">
+        <summary>观众可以现场看反差赛吗？</summary>
+        <div class="ans">A 组第 3 轮开放 120 个观众席，凭报名手机号在入口核验，11月8日 19:00 开始入场。场内禁止拍摄选手脸部特写，录屏直播由赛事方统一提供。线上同步直播在赛事频道，延迟约 30 秒。</div>
+      </details>
+      <details class="faq-item">
+        <summary>剪辑点密集会被扣分吗？</summary>
+        <div class="ans">v2.3 没有设剪辑点上限，只在裁判备注栏记录“节奏偏快”一类意见，不直接扣分。A-09 的 14 刀就是备注处理，反对票未改变结果。是否写进 v2.4 要等 11月10日 B 组复赛后的裁判组公告。</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 9 用户评论 -->
+  <section class="block" id="comments" aria-labelledby="cmTitle">
+    <div class="sec-head"><h2 id="cmTitle">赛后评论区：有人服气，有人还在争那 0.8 分<small>COMMENTS</small></h2></div>
+    <div class="comments">
+      <div class="cmt">
+        <div class="avatar" aria-hidden="true">阿</div>
+        <div>
+          <div class="cmt-top"><b>阿岚看赛</b><time datetime="2026-11-08T08:52">今天 08:52</time></div>
+          <p>A-17 那段货架背景是真的稳，第 12 秒和第 40 秒的货架编号都是 C-3，这种参照物比什么形容都管用。</p>
+          <span class="like">有用 34</span>
+        </div>
+      </div>
+      <div class="cmt">
+        <div class="avatar" aria-hidden="true">老</div>
+        <div>
+          <div class="cmt-top"><b>老周不熬夜</b><time datetime="2026-11-08T08:15">今天 08:15</time></div>
+          <p>A-09 拿 8.6 我保留意见。1 分 52 秒剪 14 刀，观众看到的是拼出来的反差，不是自然发生的。周裁判那张反对票写得比支持票认真。</p>
+          <span class="quote">引用复核记录：反对票备注“剪辑点过密，差异被放大”</span>
+          <span class="like">有用 27</span>
+        </div>
+      </div>
+      <div class="cmt">
+        <div class="avatar" aria-hidden="true">小</div>
+        <div>
+          <div class="cmt-top"><b>小满在搬砖</b><time datetime="2026-11-07T22:40">昨天 22:40</time></div>
+          <p>B-06 延期有点烦，票都买好了。不过退票流程倒是快，昨晚 18:20 发的通知，21 点就到账了。</p>
+          <span class="like">有用 12</span>
+        </div>
+      </div>
+      <div class="cmt">
+        <div class="avatar" aria-hidden="true">镜</div>
+        <div>
+          <div class="cmt-top"><b>镜头数刀人</b><time datetime="2026-11-07T20:05">昨天 20:05</time></div>
+          <p>数了一下 A-04 补交的三张图，时间戳跨度 4 分钟，但三张之间没有连续画面。按“连续性”严格理解，可核对性最多 7 分，别指望翻盘。</p>
+          <span class="like">有用 19</span>
+        </div>
+      </div>
+      <div class="cmt">
+        <div class="avatar" aria-hidden="true">路</div>
+        <div>
+          <div class="cmt-top"><b>路过打酱油</b><time datetime="2026-11-07T19:22">昨天 19:22</time></div>
+          <p>规则改来改去，观众看得累。v2.3 到底让谁占便宜，能不能直接给个名单。</p>
+          <span class="like">有用 6</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 相关资讯 -->
+  <section class="block" id="news" aria-labelledby="nwTitle">
+    <div class="sec-head"><h2 id="nwTitle">赛事资讯<small>NEWS</small></h2></div>
+    <div class="news-grid">
+      <div class="news-list">
+        <article class="news-item"><time datetime="2026-11-08">11月8日</time><div><h3>A 组第 3 轮出场顺序公布，A-17 打头阵</h3><p>顺序已在报名系统同步，裁判席为林某、周某等 5 人，观众席 19:00 入场。</p></div></article>
+        <article class="news-item"><time datetime="2026-11-07">11月7日</time><div><h3>判定表 v2.3 发布，录屏水印获认可</h3><p>仅改一条凭证认定，折分规则未动，A-09 成为首个适用案例。</p></div></article>
+        <article class="news-item"><time datetime="2026-11-07">11月7日</time><div><h3>B-06 搭档组改期，退票当日到账</h3><p>原 11月8日 20:40 场次作废，改至 11月10日 19:00，裁判席不变。</p></div></article>
+        <article class="news-item"><time datetime="2026-11-06">11月6日</time><div><h3>复核记录开放查询，按编号可看投票明细</h3><p>支持票与反对票原文一并公开，A-09 的 4:1 票型首次可查。</p></div></article>
+      </div>
+      <aside class="rank" id="rank" aria-label="本周榜单">
+        <h3>本周加权总分榜（截至 11月8日 09:00）</h3>
+        <ol>
+          <li><span>A-09 退役消防员卸甲</span><span class="score">8.6</span></li>
+          <li><span>A-22 夜班店员晨间状态</span><span class="score">8.3</span></li>
+          <li><span>A-12 会计的舞台妆</span><span class="score">8.1</span></li>
+          <li><span>A-08 修车工的钢琴段</span><span class="score">7.9</span></li>
+          <li><span>A-04 教师的手作展台</span><span class="score">7.6</span></li>
+        </ol>
+        <p class="note">分数含可核对性折分，A-04 为折算前预估。</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 11 时间线 -->
+  <section class="block" id="timeline" aria-labelledby="tlTitle">
+    <div class="sec-head"><h2 id="tlTitle">第 11 期关键时间线<small>TIMELINE</small></h2></div>
+    <div class="timeline">
+      <div class="tl-item"><time datetime="2026-10-28">10月28日</time><p>第 11 期报名截止，A 组 40 人、B 组 5 组锁定。</p></div>
+      <div class="tl-item"><time datetime="2026-11-05">11月5日</time><p>A-04 补交 3 张带时间戳的原图，初审通过，等待第 3 轮现场评分。</p></div>
+      <div class="tl-item"><time datetime="2026-11-06">11月6日</time><p>复核记录开放查询，A-09 卸甲片段 4:1 票型公开。</p></div>
+      <div class="tl-item"><time datetime="2026-11-07">11月7日</time><p>判定表 v2.3 发布；B-06 场次顺延至 11月10日。</p></div>
+      <div class="tl-item"><time datetime="2026-11-08">今天</time><p>A-1 与 A-3 第 3 轮进行，A-17 首场，19:30 开赛。</p></div>
+      <div class="tl-item"><time datetime="2026-11-10">11月10日</time><p>B 组复赛，B-06 搭档组 19:00 登场，裁判席不变。</p></div>
+    </div>
+  </section>
+
+  <!-- 12 相关推荐 -->
+  <section class="block" id="related" aria-labelledby="rlTitle">
+    <div class="sec-head"><h2 id="rlTitle">相关推荐<small>RELATED</small></h2></div>
+    <div class="rel-tags">
+      <a href="#deep">反差素材判定表 v2.3 逐条对照</a>
+      <a href="#feature">A-17 仓库到红毯录屏拆解</a>
+      <a href="#comments">A-09 卸甲片段反对票全文</a>
+      <a href="#updates">11月10日 B 组复赛赛程</a>
+      <a href="#guide">1 分钟剪辑点怎么数</a>
+      <a href="#faq">可核对性折分怎么算</a>
+      <a href="#timeline">第 11 期完整时间线</a>
+      <a href="#rank">本周加权总分榜</a>
+      <a href="#news">B-06 退票流程说明</a>
+    </div>
+  </section>
+
+</main>
+
+<aside class="side" aria-label="侧栏">
+  <nav class="side-card side-nav" id="sideNav" aria-label="栏目导航">
+    <h3>栏目导航</h3>
+    <a href="#overview">反差大赛概览</a>
+    <a href="#feature">今日精选</a>
+    <a href="#updates">赛程更新</a>
+    <a href="#categories">赛道分类</a>
+    <a href="#deep">深度解析</a>
+    <a href="#guide">观赛指南</a>
+    <a href="#compare">素材对照</a>
+    <a href="#faq">常见问答</a>
+    <a href="#comments">赛后评论</a>
+    <a href="#news">赛事资讯</a>
+    <a href="#timeline">时间线</a>
+    <a href="#related">相关推荐</a>
+  </nav>
+  <div class="side-card">
+    <h3>今晚看点</h3>
+    <ul class="side-list">
+      <li>A-17 首场<span>19:30 · 形象反差</span></li>
+      <li>A-09 卫冕战<span>19:55 · 暂列第一</span></li>
+      <li>A-04 补交素材首秀<span>20:20 · 可核对性待定</span></li>
+    </ul>
+    <p class="note">以上时间来自 11月8日 09:00 出场顺序公告。</p>
+  </div>
+  <div class="side-card">
+    <h3>裁判席一句话</h3>
+    <p class="side-quote">“水印录屏的连续性比截图强，能排除事后补拍。”——规则裁判林某，11月7日复核记录</p>
+    <p class="note">反对票原文见评论区置顶引用。</p>
+  </div>
+</aside>
+</div>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-main">
+      <div class="foot-brand">
+        <a class="brand" href="/#" aria-label="r星吃瓜 回到首页">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="#2b2b40"/>
+            <path d="M32 9l6.2 14.6L54 25.6 43.3 35.8 46.2 51 32 42.9 17.8 51l2.9-15.2L10 25.6l15.8-2z" fill="#ff8a92"/>
+            <circle cx="32" cy="30" r="5.4" fill="#1b1b2b"/>
+          </svg>
+          <span class="brand-text"><b>r星吃瓜</b><span>CONTRAST ARENA</span></span>
+        </a>
+        <p>把赛程、原始素材和投票记录摆在一起，让每一场反差的分数都找得到出处。</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h4>赛事</h4>
+          <ul>
+            <li><a href="#updates">赛程更新</a></li>
+            <li><a href="#rank">本周榜单</a></li>
+            <li><a href="#timeline">关键时间线</a></li>
+            <li><a href="#categories">赛道分类</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>内容</h4>
+          <ul>
+            <li><a href="#feature">今日精选</a></li>
+            <li><a href="#deep">判定表解析</a></li>
+            <li><a href="#guide">观赛指南</a></li>
+            <li><a href="#compare">素材对照清单</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>互动</h4>
+          <ul>
+            <li><a href="#faq">报名与申诉</a></li>
+            <li><a href="#comments">赛后评论</a></li>
+            <li><a href="#news">赛事资讯</a></li>
+            <li><a href="#related">相关推荐</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>页面示例数据：选手编号、场次时间与分数来自赛事报名系统导出与裁判组群公告，参考时间 2026-11-08；正文更新时间对应“赛程与规则更新明细”中 09:00 与 08:40 两条。</p>
+      <p>© 2026 r星吃瓜 · 内容仅作赛事观察示例</p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部" title="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuBtn=document.getElementById('menuBtn');
+  var navMain=document.getElementById('navMain');
+  if(menuBtn&&navMain){
+    menuBtn.addEventListener('click',function(){
+      var open=navMain.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    navMain.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.matchMedia('(max-width:980px)').matches){
+        navMain.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 回到顶部 */
+  var toTop=document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY>520){toTop.classList.add('show')}else{toTop.classList.remove('show')}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var sideLinks=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets=sideLinks.map(function(a){
+    var id=a.getAttribute('href').replace('/#','').replace('#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+  if('IntersectionObserver' in window&&targets.length){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var id=en.target.id;
+          sideLinks.forEach(function(a){
+            var href=a.getAttribute('href');
+            a.classList.toggle('on',href==='#'+id);
+          });
+        }
+      });
+    },{rootMargin:'-110px 0px -60% 0px',threshold:0});
+    targets.forEach(function(t){io.observe(t)});
+  }
+
+  /* 本地搜索 */
+  var form=document.getElementById('searchForm');
+  var input=document.getElementById('q');
+  var fb=document.getElementById('searchFeedback');
+  var searchables=Array.prototype.slice.call(document.querySelectorAll('main h2, main h3, main p, main li, main summary, main .ans, main time, .side-card li, .rank li, .rel-tags a, .cat b'));
+
+  function doSearch(){
+    var q=input.value.trim();
+    if(!q){fb.textContent='';return false}
+    var hits=[];
+    var seen=new Set();
+    searchables.forEach(function(el){
+      var txt=el.textContent||'';
+      if(txt.indexOf(q)>-1){
+        var id='';
+        var anc=el.closest('section,aside,.rank');
+        if(anc&&anc.id){id=anc.id}
+        var label=txt.replace(/\s+/g,' ').trim().slice(0,36);
+        var key=id+'|'+label;
+        if(!seen.has(key)&&hits.length<3){seen.add(key);hits.push({id:id,label:label})}
+      }
+    });
+    if(hits.length===0){
+      fb.textContent='没有找到“'+q+'”相关条目。可试试：A-17、判定表、11月10日、可核对性。';
+    }else{
+      fb.innerHTML='找到 '+hits.length+' 条相关内容：'+hits.map(function(h){
+        var t=h.label+(h.label.length>=36?'…':'');
+        return h.id?'<a href="#'+h.id+'">'+t+'</a>':t;
+      }).join('；');
+    }
+    return false;
+  }
+  if(form){
+    form.addEventListener('submit',function(e){e.preventDefault();doSearch()});
+    document.getElementById('searchBtn').addEventListener('click',function(e){e.preventDefault();doSearch()});
+    input.addEventListener('keydown',function(e){
+      if(e.key==='Enter'){e.preventDefault();doSearch()}
+      if(e.key==='Escape'){input.value='';fb.textContent=''}
+    });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"r星吃瓜",
+  "alternateName":"反差大赛观察站",
+  "inLanguage":"zh-CN",
+  "description":"聚焦反差大赛与今日赛事的观察站，整理赛程、选手素材、判定规则与赛后评论。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"反差大赛的报名截止到什么时候？","acceptedAnswer":{"@type":"Answer","text":"第11期报名已于10月28日截止，A组40人、B组5组已锁定。第12期报名预计12月1日开放，需提交日常素材样片和身份证明，赛道名额在报名页实时显示。"}},
+    {"@type":"Question","name":"反差素材可以用以前拍的吗？","acceptedAnswer":{"@type":"Answer","text":"可以，但须证明拍摄时间在报名前12个月内且与日常素材同属一人。凭证按v2.3认三类：带时间水印的录屏、相册原图、平台后台页。"}},
+    {"@type":"Question","name":"可核对性低于6分为什么按8折算？","acceptedAnswer":{"@type":"Answer","text":"该折分自v2.1起生效，目的是让来源说不清的素材无法靠单项高分冲榜。8折后仍参与排名，评分表单列原始分和折算分两栏。"}},
+    {"@type":"Question","name":"对裁判投票有异议怎么申诉？","acceptedAnswer":{"@type":"Answer","text":"成绩公布后48小时内，用选手编号向规则裁判提交申诉表并附原始文件。11月6日起复核记录已开放查询，可先看投票明细再决定是否申诉。"}},
+    {"@type":"Question","name":"B组为什么延期到11月10日？","acceptedAnswer":{"@type":"Answer","text":"B-06搭档组场地审核未通过，原定11月8日20:40场次作废，改至11月10日19:00，裁判席不变，门票按原渠道退。"}},
+    {"@type":"Question","name":"观众可以现场看反差赛吗？","acceptedAnswer":{"@type":"Answer","text":"A组第3轮开放120个观众席，凭报名手机号核验，11月8日19:00入场。场内禁止拍摄选手脸部特写，线上直播延迟约30秒。"}},
+    {"@type":"Question","name":"剪辑点密集会被扣分吗？","acceptedAnswer":{"@type":"Answer","text":"v2.3未设剪辑点上限，只在裁判备注栏记录节奏偏快一类意见，不直接扣分。A-09的14刀即备注处理，反对票未改变结果。"}}
+  ]
+}
+</script>
+</body>
+      </html>
